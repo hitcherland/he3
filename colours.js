@@ -1,4 +1,4 @@
-if(he3 === undefined) { he3 = {}; }
+if(typeof he3 === 'undefined') { he3 = {}; }
 he3.colours = {
 	HSVtoRGB: function(h, s, v) {
 			var r, g, b, i, f, p, q, t;
