@@ -25,8 +25,8 @@ he3.colours = {
 			);
 	},
 	getSoft: function(hue) {
-		saturation = 0.1;
-		value = 0.1;	
+		saturation = .248;
+		value = .902;	
 		return this.HSVtoRGB(hue, saturation, value);
 	}
 }
