@@ -18,16 +18,18 @@ he3.colours = {
 					case 4: r = t, g = p, b = v; break;
 					case 5: r = v, g = p, b = q; break;
 			}
-			return {
-					r: Math.round(r * 255),
-					g: Math.round(g * 255),
-					b: Math.round(b * 255)
-			};
+			return new THREE.Color(
+					Math.round(r * 255),
+					Math.round(g * 255),
+					Math.round(b * 255)
+			);
 	},
-	getSoftColor: function(hue) {
+	getSoft: function(hue) {
 		console.log(this);	
 		saturation = 0.1;
 		value = 0.1;	
-		return new THREE.Color( seed & 0xffffff );  
+		return HSVtoRGB(hue, saturation, value);
 	}
 }
+
+he3.colors = he3.colours;
