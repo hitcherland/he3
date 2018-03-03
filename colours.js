@@ -24,13 +24,13 @@ he3.colours = {
 		saturation = .248;
 		value = .902;	
 		return this.HSVtoRGB(hue, saturation, value);
-	}
+	},
 
 	getHard: function(hue) {
 		saturation = .496;
 		value = .902;	
 		return this.HSVtoRGB(hue, saturation, value);
-	}
+	},
 
 }
 
