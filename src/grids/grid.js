@@ -6,7 +6,7 @@ he3.Grid = function( xSegments, ySegments, blockSize ) {
     var meshes = [];
     for (var x=-xSegments/2; x<=xSegments/2; x++) {
         for (var y=-ySegments/2; y<=ySegments/2; y++) {
-            var mesh = new GridBlock( blockSize );
+            var mesh = new he3.GridBlock( blockSize );
             mesh.position.set( x * blockSize, 0, y * blockSize);
             this.add ( mesh );
         }
