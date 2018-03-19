@@ -3,16 +3,19 @@
 import glob
 from jsmin import jsmin
 import sys
+import os
+
+topdir = '/'.join( sys.argv[ 0 ].split( '/' )[ :-1 ] ) + '/'
 
 data = ""
-with open('src/three_js/three.min.js') as js_file:
+with open(topdir + 'src/three_js/three.min.js') as js_file:
 	data += js_file.read();
 
-for filename in glob.iglob('src/**/*.js', recursive=True):
-	if filename == 'src/three_js/three.min.js': continue
+for filename in glob.iglob(topdir + 'src/**/*.js', recursive=True):
+	if filename == topdir + 'src/three_js/three.min.js': continue
 	with open(filename) as js_file:
 			data += js_file.read();
 
 minified = jsmin(data, quote_chars="'\"`")
-with open('he3.min.js', 'w') as fh:
+with open(topdir + 'he3.min.js', 'w') as fh:
 	fh.write(minified);
